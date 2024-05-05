@@ -1,0 +1,23 @@
+<idea-plugin>
+  <id>com.vanjor.FragmentInComposeHelper</id>
+  <name>FragmentInComposeHelper</name>
+  <description>
+    This plugin helps quickly generate code to use Fragment in Compose
+    https://developer.android.com/develop/ui/compose/migrate/interoperability-apis/views-in-compose#fragments-in-compose
+  </description>
+  <vendor email="wenjiuwangwork@gmail.com">Wenjiu Wang</vendor>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>org.jetbrains.kotlin</depends>
+
+  <extensions defaultExtensionNs="com.intellij"/>
+
+  <actions>
+    <action id="com.vanjor.fragmentincomposehelper.GenerateFragmentContainerViewAction"
+            class="com.vanjor.fragmentincomposehelper.GenerateFragmentContainerViewAction"
+            text="Generate FragmentContainerView"
+            description="Generate FragmentContainerView XML file for selected fragment">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+    </action>
+  </actions>
+</idea-plugin>
